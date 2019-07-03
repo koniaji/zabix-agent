@@ -1,0 +1,13 @@
+version: "2"
+services:
+  zabbix-agent:
+    image: zabbix/zabbix-agent:latest
+    environment:
+     - ZBX_HOSTNAME=${ZBX_HOSTNAME}
+     - ZBX_SERVER_HOST=${ZBX_SERVER_HOST}
+    networks:
+      - reverse-proxy
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy     
