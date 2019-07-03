@@ -5,6 +5,7 @@ services:
     environment:
      - ZBX_HOSTNAME=${ZBX_HOSTNAME}
      - ZBX_SERVER_HOST=${ZBX_SERVER_HOST}
+     - VIRTUAL_HOST=${BASE_DOMAIN}
     networks:
       - reverse-proxy
 networks:
